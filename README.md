@@ -6,10 +6,10 @@ Este repositório serve como um portal centralizado para catalogar, apresentar e
 
 ---
 
-**## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 * **HTML5**: Estrutura semântica e acessível.
 * **CSS3**: Estilização baseada em variáveis de cor (`:root`) e tipografia imersiva (*IBM Plex Mono* e *Fraunces*).
 * **JavaScript**: Manipulação de registos, áudio e efeitos visuais em tempo real.
 
----**
+---
