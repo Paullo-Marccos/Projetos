@@ -6,10 +6,10 @@
 <meta name="author" content="Paullo-Marccos">
 <meta name="description" content="Portfólio de Paullo-Marccos: estudante de Técnico em TI e de Análise e Desenvolvimento de Sistemas, com projetos web em HTML, CSS e JavaScript puro.">
 <title>Paullo-Marccos-Portfólio</title>
+<link rel="stylesheet" href="css/introducao.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;1,300&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/introducao.css">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
 
   <header class="hero">
     <h1>Interfaces que contam <em>histórias</em></h1>
-    <p>Sou Paulo Marcos, desenvolvedor web e estudante de Técnico em TI e de Análise e Desenvolvimento de Sistemas. Construo experiências interativas em HTML, CSS e JavaScript puro, sem frameworks, com atenção a design, acessibilidade e narrativa. Estes são quatro projetos que mostram como trabalho.</p>
+    <p>Sou Paulo Marcos, desenvolvedor web e estudante de Técnico em TI e de Análise e Desenvolvimento de Sistemas. Construo experiências interativas em HTML, CSS e JavaScript puro, sem frameworks. Abaixo, meus projetos separados por tipo: jogos, lojas e prática.</p>
     <div class="cta">
       <a class="btn" href="#projetos">Ver projetos</a>
       <a class="btn ghost" href="https://github.com/Paullo-Marccos" target="_blank" rel="noopener">GitHub</a>
@@ -34,87 +34,21 @@
   </header>
 
   <section id="projetos">
-    <h2>Projetos selecionados</h2>
-    <p class="lead">Código aberto sob licença MIT. Cada projeto tem repositório público no GitHub.</p>
+    <h2>Projetos</h2>
+    <p class="lead">Escolha uma categoria para filtrar. Clique em "Ver detalhes" para abrir mais informações de cada projeto.</p>
 
-    <article class="project">
-      <div>
-        <h3>A.D.A.C.H.I Archive</h3>
-        <div class="kind">Experiência interativa de enigmas</div>
-        <div class="links">
-          <a href="https://paullo-marccos.github.io/adachi-archive/" target="_blank" rel="noopener">Ver online</a>
-          <a href="https://github.com/Paullo-Marccos/adachi-archive" target="_blank" rel="noopener">Código</a>
-        </div>
-      </div>
-      <div>
-        <p>Um jogo de enigmas, criptografia e investigação em que a própria interface faz parte do mistério. As fases avançam por chaves, e as pistas estão no texto, na estrutura e no código.</p>
-        <ul>
-          <li>Introdução animada e interface bilíngue (PT/EN)</li>
-          <li>Progressão por fases, cada uma liberada pela anterior</li>
-          <li>Desafios que misturam códigos, referências históricas, matemática e criptografia</li>
-        </ul>
-        <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
-      </div>
-    </article>
+    <!-- Botões de filtro: o JavaScript preenche os números -->
+    <div class="filtros" role="group" aria-label="Filtrar projetos por categoria">
+      <button class="filtro ativo" data-filtro="todos" aria-pressed="true">Todos <span class="contagem"></span></button>
+      <button class="filtro" data-filtro="jogos" aria-pressed="false">Jogos <span class="contagem"></span></button>
+      <button class="filtro" data-filtro="lojas" aria-pressed="false">Lojas <span class="contagem"></span></button>
+      <button class="filtro" data-filtro="pratica" aria-pressed="false">Prática <span class="contagem"></span></button>
+    </div>
 
-    <article class="project">
-      <div>
-        <h3>A.D.A.C.H.I Registros</h3>
-        <div class="kind">Diário narrativo interativo</div>
-        <div class="links">
-          <a href="https://paullo-marccos.github.io/adachi-registros/" target="_blank" rel="noopener">Ver online</a>
-          <a href="https://github.com/Paullo-Marccos/adachi-registros" target="_blank" rel="noopener">Código</a>
-          
-        </div>
-      </div>
-      <div>
-        <p>Acervo de histórias e registros ocultos que expande o universo do Archive. O visitante abre entradas, lê fragmentos e encontra um fórum de comentários corrompidos.</p>
-        <ul>
-          <li>Sequência de boot com efeito de digitação e glitch no título</li>
-          <li>Trilha ambiente gerada em tempo real com Web Audio API, sem arquivo de áudio</li>
-          <li>Fundo animado em canvas, entradas acessíveis por teclado e suporte a <code>prefers-reduced-motion</code></li>
-        </ul>
-        <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Web Audio API</span><span>Canvas</span></div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div>
-        <h3>Loja Yorha Manga &amp; Figures</h3>
-        <div class="kind">Loja temática inspirada em NieR:Automata</div>
-        <div class="links">
-          <a href="https://paullo-marccos.github.io/Loja-Yorha-Manga-Figures/" target="_blank" rel="noopener">Ver online</a>
-          <a href="https://github.com/Paullo-Marccos/Loja-Yorha-Manga-Figures" target="_blank" rel="noopener">Código</a>
-        </div>
-      </div>
-      <div>
-        <p>Terminal de vendas da YoRHa para navegar e comprar action figures e mangás, com carrinho funcional e uma experiência imersiva.</p>
-        <ul>
-          <li>Carrinho em painel lateral, com total em tempo real e persistência via <code>localStorage</code></li>
-          <li>Assistente virtual (Pod 042), carrossel infinito e boot de terminal com <code>async/await</code></li>
-          <li>Efeitos sonoros sintéticos, linhas de varredura CRT, cursor personalizado e um easter egg com Konami Code</li>
-        </ul>
-        <div class="tags"><span>HTML5</span><span>CSS Grid</span><span>Flexbox</span><span>JavaScript ES6+</span><span>localStorage</span></div>
-      </div>
-    </article>
-
-    <article class="project">
-      <div>
-        <h3>Projetos</h3>
-        <div class="kind">Portal de documentação</div>
-        <div class="links">
-          <a href="https://github.com/Paullo-Marccos/Projetos" target="_blank" rel="noopener">Código</a>
-        </div>
-      </div>
-      <div>
-        <p>Portal que reúne registros e documentação dos meus projetos web e experiências imersivas, com foco em design, código e narrativas ocultas. Cada projeto traz descrição, motivação e stack.</p>
-        <ul>
-          <li>Cards de projeto com metadados, descrição e tecnologias</li>
-          <li>Tipografia com Fraunces e IBM Plex Mono, carregada pelo Google Fonts</li>
-        </ul>
-        <div class="tags"><span>HTML5</span><span>CSS3</span></div>
-      </div>
-    </article>
+    <!-- Os cards são criados pelo js/introducao.js -->
+    <div class="grade" id="grade" aria-live="polite">
+      <p class="aviso">Carregando projetos... (se esta mensagem não sumir, ative o JavaScript.)</p>
+    </div>
   </section>
 
   <section id="formacao">
@@ -148,11 +82,16 @@
   <section id="contato" class="contact">
     <h2>Vamos conversar</h2>
     <p>Quer ver o código, sugerir melhorias ou falar sobre um projeto? Meu GitHub é o melhor ponto de partida.</p>
-    <a class="btn" href="https://github.com/Paullo-Marccos" target="_blank" rel="noopener">github.com/Paullo-Marccos</a>
+    <div class="cta">
+      <a class="btn" href="https://github.com/Paullo-Marccos" target="_blank" rel="noopener">github.com/Paullo-Marccos</a>
+      <!-- O e-mail é montado pelo js/introducao.js (fica fora do HTML para evitar robôs de spam) -->
+      <a class="btn ghost" id="botao-email" href="#contato">Ative o JavaScript para ver o e-mail</a>
+    </div>
   </section>
 
   <footer>Código aberto sob a licença MIT · Paullo Marccos</footer>
 </div>
 
+<script src="java/index.js"></script>
 </body>
 </html>
