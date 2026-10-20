@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Paullo-Marccos">
-<meta name="description" content="Portfólio de Paullo-Marccos: estudante de Técnico em TI e de Análise e Desenvolvimento de Sistemas, com projetos web em HTML, CSS e JavaScript puro.">
-<title>Paullo-Marccos-Portfólio</title>
-<link rel="stylesheet" href="css/introducao.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;1,300&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Paullo-Marccos">
+  <meta name="description" content="Portfólio de Paulo Marcos: estudante de TI e desenvolvedor web, com projetos em HTML, CSS e JavaScript.">
+  <title>Paulo Marcos | Desenvolvedor web</title>
+  <link rel="stylesheet" href="css/introducao.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="wrap">
+
   <div class="top">
-    <span class="logo">Paullo-Marccos</span>
+    <span class="logo">Paulo Marcos</span>
     <nav aria-label="Principal">
       <a href="#projetos">Projetos</a>
       <a href="#formacao">Formação</a>
@@ -25,8 +26,13 @@
   </div>
 
   <header class="hero">
-    <h1>Interfaces que contam <em>histórias</em></h1>
-    <p>Sou Paulo Marcos, desenvolvedor web e estudante de Técnico em TI e de Análise e Desenvolvimento de Sistemas. Construo experiências interativas em HTML, CSS e JavaScript puro, sem frameworks. Abaixo, meus projetos separados por tipo: jogos, lojas e prática.</p>
+    <h1>Paulo Marcos</h1>
+    <p class="cargo">Desenvolvedor web em formação</p>
+    <p class="intro">
+      Estudante de Técnico em TI e de Análise e Desenvolvimento de Sistemas.
+      Crio sites e jogos com HTML, CSS e JavaScript, e coloco em prática
+      o que aprendo em cada projeto.
+    </p>
     <div class="cta">
       <a class="btn" href="#projetos">Ver projetos</a>
       <a class="btn ghost" href="https://github.com/Paullo-Marccos" target="_blank" rel="noopener">GitHub</a>
@@ -35,61 +41,175 @@
 
   <section id="projetos">
     <h2>Projetos</h2>
-    <p class="lead">Escolha uma categoria para filtrar. Clique em "Ver detalhes" para abrir mais informações de cada projeto.</p>
+    <p class="lead">Escolha uma categoria para filtrar os projetos.</p>
 
-    <!-- Botões de filtro: o JavaScript preenche os números -->
     <div class="filtros" role="group" aria-label="Filtrar projetos por categoria">
-      <button class="filtro ativo" data-filtro="todos" aria-pressed="true">Todos <span class="contagem"></span></button>
-      <button class="filtro" data-filtro="jogos" aria-pressed="false">Jogos <span class="contagem"></span></button>
-      <button class="filtro" data-filtro="lojas" aria-pressed="false">Lojas <span class="contagem"></span></button>
-      <button class="filtro" data-filtro="pratica" aria-pressed="false">Prática <span class="contagem"></span></button>
+      <button class="filtro ativo" type="button" data-filtro="todos" aria-pressed="true">Todos <span class="contagem"></span></button>
+      <button class="filtro" type="button" data-filtro="jogos" aria-pressed="false">Jogos <span class="contagem"></span></button>
+      <button class="filtro" type="button" data-filtro="lojas" aria-pressed="false">Lojas <span class="contagem"></span></button>
+      <button class="filtro" type="button" data-filtro="pratica" aria-pressed="false">Prática <span class="contagem"></span></button>
     </div>
 
-    <!-- Os cards são criados pelo js/introducao.js -->
-    <div class="grade" id="grade" aria-live="polite">
-      <p class="aviso">Carregando projetos... (se esta mensagem não sumir, ative o JavaScript.)</p>
+    <div class="grade" id="grade">
+
+      <article class="card" data-categoria="jogos">
+                    <h3>A.D.A.C.H.I Archive</h3>
+                    <p class="tipo">Jogo de enigmas</p>
+                    <p>Jogo de enigmas, criptografia e investigação em que a própria interface faz parte do mistério. As fases são liberadas em sequência e o site é bilíngue (PT/EN).</p>
+                    <ul class="tags">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                    <div class="links">
+                      <a href="https://paullo-marccos.github.io/adachi-archive/" target="_blank" rel="noopener">Ver online</a>
+                      <a href="https://github.com/Paullo-Marccos/adachi-archive" target="_blank" rel="noopener">Código</a>
+                    </div>
+                  </article>
+
+      <article class="card" data-categoria="jogos">
+                    <h3>A.D.A.C.H.I Registros</h3>
+                    <p class="tipo">Diário narrativo interativo</p>
+                    <p>Acervo de histórias que expande o universo do Archive. A trilha sonora é criada em tempo real pelo navegador, sem arquivo de áudio, e o fundo é animado.</p>
+                    <ul class="tags">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>Web Audio API</li>
+                      <li>Canvas</li>
+                    </ul>
+                    <div class="links">
+                      <a href="https://paullo-marccos.github.io/adachi-registros/" target="_blank" rel="noopener">Ver online</a>
+                      <a href="https://github.com/Paullo-Marccos/adachi-registros" target="_blank" rel="noopener">Código</a>
+                    </div>
+                  </article>
+
+      <article class="card" data-categoria="lojas">
+                    <h3>Loja Yorha Manga &amp; Figures</h3>
+                    <p class="tipo">Loja online temática</p>
+                    <p>Loja inspirada em NieR:Automata para navegar e comprar action figures e mangás. O carrinho calcula o total na hora e guarda os itens ao recarregar a página.</p>
+                    <ul class="tags">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>localStorage</li>
+                    </ul>
+                    <div class="links">
+                      <a href="https://paullo-marccos.github.io/Loja-Yorha-Manga-Figures/" target="_blank" rel="noopener">Ver online</a>
+                      <a href="https://github.com/Paullo-Marccos/Loja-Yorha-Manga-Figures" target="_blank" rel="noopener">Código</a>
+                    </div>
+                  </article>
+
+      <article class="card" data-categoria="lojas">
+                    <h3>Café &amp; Prosa</h3>
+                    <p class="tipo">Site de cafeteria</p>
+                    <p>Site de uma cafeteria com cardápio online. O cliente escolhe os produtos, define a quantidade e acompanha o subtotal do pedido em tempo real.</p>
+                    <ul class="tags">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                    </ul>
+                    <div class="links">
+                      <a href="https://paullo-marccos.github.io/cafe-prosa-cafeteria/" target="_blank" rel="noopener">Ver online</a>
+                      <a href="https://github.com/Paullo-Marccos/cafe-prosa-cafeteria" target="_blank" rel="noopener">Código</a>
+                    </div>
+                  </article>
+
+      <article class="card" data-categoria="pratica">
+                    <h3>Projetos</h3>
+                    <p class="tipo">Documentação</p>
+                    <p>Repositório que reúne a descrição, a motivação e as tecnologias de cada um dos meus projetos web.</p>
+                    <ul class="tags">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                    </ul>
+                    <div class="links">
+                      <a href="https://github.com/Paullo-Marccos/Projetos" target="_blank" rel="noopener">Código</a>
+                    </div>
+                  </article>
+
+      <article class="card" data-categoria="pratica">
+                    <h3>Estoque</h3>
+                    <p class="tipo">Estoque de materiais</p>
+                    <p>Estoque simples de materiais, com preço e aplicativo.</p>
+                    <ul class="tags">
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>App</li>
+                      <li>LocalStorage</li>
+                    </ul>
+                    <div class="links">
+                      <a href="https://paullo-marccos.github.io/estoque-com-app/" target="_blank" rel="noopener">Ver online</a>
+                      <a href="https://github.com/Paullo-Marccos/estoque-com-app" target="_blank" rel="noopener">Código</a>
+                    </div>
+                  </article>
+
     </div>
   </section>
 
   <section id="formacao">
     <h2>Formação</h2>
-    <p class="lead">Estudo a base técnica e a formação superior ao mesmo tempo, e aplico o que aprendo nos projetos acima.</p>
+    <p class="lead">Estudo a base técnica e a graduação ao mesmo tempo.</p>
     <div class="edu">
       <article>
-        <span class="status">Em andamento</span>
-        <h4>Técnico em Tecnologia da Informação</h4>
-        <p>No curso técnico, estudo HTML, CSS, JavaScript, SQL e banco de dados.</p>
+        <h3>Técnico em Tecnologia da Informação</h3>
+        <p>HTML, CSS, JavaScript, SQL e banco de dados.</p>
+        <p class="status">Em andamento</p>
       </article>
       <article>
-        <span class="status">Em andamento</span>
-        <h4>Graduação em Análise e Desenvolvimento de Sistemas (ADS)</h4>
-        <p>Formação superior voltada ao desenvolvimento e à análise de sistemas.</p>
+        <h3>Análise e Desenvolvimento de Sistemas</h3>
+        <p>Graduação voltada ao desenvolvimento e à análise de sistemas.</p>
+        <p class="status">Em andamento</p>
       </article>
     </div>
   </section>
 
   <section id="tecnologias">
     <h2>Tecnologias</h2>
-    <p class="lead">Fundamentos da web, aplicados sem dependências externas.</p>
-    <div class="stack">
-      <div><h4>HTML5</h4><p>Estrutura semântica e acessibilidade, com <code>aria-*</code> e navegação por teclado.</p></div>
-      <div><h4>CSS3</h4><p>Flexbox, Grid, variáveis CSS, animações com <code>@keyframes</code> e layouts responsivos.</p></div>
-      <div><h4>JavaScript</h4><p>ES6+, manipulação de DOM, estado, <code>async/await</code> e Web Storage.</p></div>
-      <div><h4>APIs do navegador</h4><p>Web Audio API e Canvas para som e gráficos gerados em tempo real.</p></div>
+    <p class="lead">O que uso nos projetos publicados no GitHub.</p>
+
+    <div class="stack-grupos">
+      <div>
+        <h3>Linguagens</h3>
+        <ul class="stack">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recursos do navegador</h3>
+        <ul class="stack">
+          <li>Web Audio API</li>
+          <li>Canvas</li>
+          <li>localStorage</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ferramentas</h3>
+        <ul class="stack">
+          <li>GitHub</li>
+          <li>GitHub Pages</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <section id="contato" class="contact">
-    <h2>Vamos conversar</h2>
-    <p>Quer ver o código, sugerir melhorias ou falar sobre um projeto? Meu GitHub é o melhor ponto de partida.</p>
+    <h2>Contato</h2>
+    <p>Quer ver o código ou conversar sobre um projeto? Me chame pelo GitHub ou por e-mail.</p>
     <div class="cta">
       <a class="btn" href="https://github.com/Paullo-Marccos" target="_blank" rel="noopener">github.com/Paullo-Marccos</a>
-      <!-- O e-mail é montado pelo js/introducao.js (fica fora do HTML para evitar robôs de spam) -->
-      <a class="btn ghost" id="botao-email" href="#contato">Ative o JavaScript para ver o e-mail</a>
+      <!-- O e-mail é montado pelo java/index.js para não ficar escrito no HTML (evita robôs de spam) -->
+      <a class="btn ghost" id="botao-email" href="#contato" target="_blank" rel="noopener">Enviar e-mail</a>
+      <button class="btn ghost" id="botao-copiar" type="button">Copiar e-mail</button>
     </div>
+    <p class="aviso-copia" id="aviso-copia" role="status"></p>
   </section>
 
-  <footer>Código aberto sob a licença MIT · Paullo Marccos</footer>
+  <footer>Paulo Marcos · 2026</footer>
+
 </div>
 
 <script src="java/index.js"></script>
